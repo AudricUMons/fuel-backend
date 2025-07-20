@@ -1,7 +1,4 @@
-process.env.PUPPETEER_CACHE_DIR = process.env.PUPPETEER_CACHE_DIR || '/opt/render/.cache/puppeteer'
-process.env.PUPPETEER_EXECUTABLE_PATH = process.env.CHROME_EXECUTABLE_PATH
-
-import puppeteer from 'puppeteer-core'
+import puppeteer from 'puppeteer'
 import fetch from 'node-fetch'
 
 // 🗺️ Mini cache pour éviter les appels multiples
@@ -44,7 +41,6 @@ function delay(time) {
 const useGeolocationAndScrape = async (fuel = 'E10', lat= 50.4561664, lng = 3.964928) => {
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',

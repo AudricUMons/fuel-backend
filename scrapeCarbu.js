@@ -40,9 +40,13 @@ function delay(time) {
 
 const useGeolocationAndScrape = async (fuel = 'E10', lat= 50.4561664, lng = 3.964928) => {
   const browser = await puppeteer.launch({
+    executablePath: process.env.CHROME_PATH || '/usr/bin/google-chrome-stable',
     headless: true,
-    executablePath: puppeteer.executablePath(),
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage'
+    ],
     defaultViewport: null
   })
 

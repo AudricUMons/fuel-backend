@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
+    "preinstall": "mkdir -p ./.cache/puppeteer",
     "postinstall": "PUPPETEER_CACHE_DIR=./.cache/puppeteer npx puppeteer install && echo '→ Puppeteer cache :' && ls -R ./.cache/puppeteer"
   },
   "dependencies": {

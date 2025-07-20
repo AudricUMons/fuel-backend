@@ -42,12 +42,7 @@ const useGeolocationAndScrape = async (fuel = 'E10', lat= 50.4561664, lng = 3.96
   const browser = await puppeteer.launch({
     headless: true,
     executablePath: puppeteer.executablePath(),
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--use-gl=egl',
-      '--disable-dev-shm-usage'
-    ],
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
     defaultViewport: null
   })
 

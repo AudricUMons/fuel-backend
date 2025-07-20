@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npx puppeteer install && echo '→ Puppeteer cache :' && ls -R ./.cache/puppeteer"
+    "postinstall": "PUPPETEER_CACHE_DIR=./.cache/puppeteer npx puppeteer install && echo '→ Puppeteer cache :' && ls -R ./.cache/puppeteer"
   },
   "dependencies": {
     "axios": "^1.6.8",

@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "preinstall": "mkdir -p ./.cache/puppeteer",
-    "postinstall": "PUPPETEER_CACHE_DIR=./.cache/puppeteer npx puppeteer install && echo '→ Puppeteer cache :' && ls -R ./.cache/puppeteer"
+    "postinstall": "PUPPETEER_CACHE_DIR=./.cache/puppeteer npx puppeteer browsers install && echo '→ Puppeteer cache :' && ls -R ./.cache/puppeteer"
   },
   "dependencies": {
-    "axios": "^1.6.8",
+    "axios": "^1.6.8",  
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

@@ -1,9 +1,8 @@
-// .puppeteerrc.cjs
+// puppeteer.config.cjs
 const { join } = require('path');
 
-/** @type {import("puppeteer").Configuration} */
+/** @type {import('puppeteer').Configuration} */
 module.exports = {
-  // À l’installation comme au runtime,
-  // Puppeteer ira chercher Chromium dans ce dossier
+  // au runtime, Puppeteer ira chercher le binaire ici
   cacheDirectory: join(__dirname, '.cache', 'puppeteer'),
 };
